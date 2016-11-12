@@ -21,7 +21,7 @@ Database
 |:---:|:---:|:---:|
 |name|string|unique, null false|
 
-### Massage
+### Message
 |column|type|constraint|
 |:---:|:---:|:---:|
 |user_id|integer|foreign_key, index, null false|
