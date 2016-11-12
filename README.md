@@ -1,67 +1,54 @@
+Database
+====
+
+## Tables
+- users
+- groups
+- group_users
+- messages
+
+## Columns
+### Users
+|column|type|
+|:---:|:---:|
+|name|string|
+|group|string|
+|comment|string|
+
 ### Group
 |column|type|
 |:---:|:---:|
 |name|string|
 |user_id|integer|
 
-### Comment
+### Massage
 |column|type|
 |:---:|:---:|
 |user_id|integer|
 |group_id|integer|
-|text|text|
+|body|text|
 |image|text|
 
-### Image
-|column|type|
-|:---:|:---:|
-|prototype_id|integer|
-|status|integer|
-|profile|string|
-
-# Association
-
-### Users
-- has_many :groups
-- has_many :comments
-
-### Groups
-- belongs_to :user
-- has_many :comments
-
-### Comments
-- belongs_to :prototype
-- belongs_to :user### Group
-|column|type|
-|:---:|:---:|
-|name|string|
-|user_id|integer|
-
-### Comment
+### Group_users
 |column|type|
 |:---:|:---:|
 |user_id|integer|
 |group_id|integer|
-|text|text|
-|image|text|
-
-### Image
-|column|type|
-|:---:|:---:|
-|prototype_id|integer|
-|status|integer|
-|profile|string|
 
 # Association
 
 ### Users
-- has_many :groups
-- has_many :comments
+- has_many :groups, through: :group_users 
+- has_many :messages
 
 ### Groups
-- belongs_to :user
-- has_many :comments
+- has_many :users, through: :group_users 
+- has_many :messages
 
-### Comments
-- belongs_to :prototype
+### Masseages
+- belongs_to :user
+- belongs_to :group
+
+### Group_users
+- belongs_to :group
 - belongs_to :user
