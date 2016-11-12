@@ -12,8 +12,9 @@ Database
 |column|type|constraint|
 |:---:|:---:|:---:|
 |name|string|index, unique, null false|
-|password|string|unique, null false|
-|confirmation password|string|unique, null false|
+|email|string|unique, null false|
+|password|string|null false|
+|confirmation password|string|null false|
 
 ### Group
 |column|type|constraint|
@@ -44,7 +45,7 @@ Database
 - has_many :users, through: :group_users 
 - has_many :messages
 
-### Masseages
+### Messeages
 - belongs_to :user
 - belongs_to :group
 
