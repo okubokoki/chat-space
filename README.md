@@ -9,17 +9,16 @@ Database
 
 ## Columns
 ### Users
-|column|type|constrant|
+|column|type|constraint|
 |:---:|:---:|:---:|
 |name|string|index, unique, null false|
-|comment|string|unique, null false|
-|group_id|integer|unique, null false|
+|password|string|unique, null false|
+|confirmation password|string|unique, null false|
 
 ### Group
 |column|type|constraint|
 |:---:|:---:|:---:|
-|name|string|constraint|
-|user_id|integer|unique, null false|
+|name|string|unique, null false|
 
 ### Massage
 |column|type|constraint|
