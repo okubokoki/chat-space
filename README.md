@@ -26,6 +26,7 @@ Database
 |:---:|:---:|:---:|
 |user_id|integer|foreign_key, index, null false|
 |group_id|integer|foreign_key, index, null false|
+|timestamps|time|
 |body|text|
 |image|text|
 
