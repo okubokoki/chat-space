@@ -16,12 +16,12 @@ Database
 |password|string|null false|
 |confirmation password|string|null false|
 
-### Group
+### Groups
 |column|type|constraint|
 |:---:|:---:|:---:|
 |name|string|unique, null false|
 
-### Message
+### Messages
 |column|type|constraint|
 |:---:|:---:|:---:|
 |user_id|integer|foreign_key, index, null false|
