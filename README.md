@@ -9,23 +9,23 @@ Database
 
 ## Columns
 ### Users
-|column|type|
-|:---:|:---:|
-|name|string|
-|comment|string|
-|group_id|integer|
+|column|type|constrant|
+|:---:|:---:|:---:|
+|name|string|index, unique, null false|
+|comment|string|unique, null false|
+|group_id|integer|unique, null false|
 
 ### Group
-|column|type|
-|:---:|:---:|
-|name|string|
-|user_id|integer|
+|column|type|constraint|
+|:---:|:---:|:---:|
+|name|string|constraint|
+|user_id|integer|unique, null false|
 
 ### Massage
-|column|type|
-|:---:|:---:|
-|user_id|integer|
-|group_id|integer|
+|column|type|constraint|
+|:---:|:---:|:---:|
+|user_id|integer|foreign_key, index, null false|
+|group_id|integer|foreign_key, index, null false|
 |body|text|
 |image|text|
 
