@@ -12,8 +12,8 @@ Database
 |column|type|
 |:---:|:---:|
 |name|string|
-|group|string|
 |comment|string|
+|group_id|integer|
 
 ### Group
 |column|type|
