@@ -1,24 +1,67 @@
-# README
+### Group
+|column|type|
+|:---:|:---:|
+|name|string|
+|user_id|integer|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Comment
+|column|type|
+|:---:|:---:|
+|user_id|integer|
+|group_id|integer|
+|text|text|
+|image|text|
 
-Things you may want to cover:
+### Image
+|column|type|
+|:---:|:---:|
+|prototype_id|integer|
+|status|integer|
+|profile|string|
 
-* Ruby version
+# Association
 
-* System dependencies
+### Users
+- has_many :groups
+- has_many :comments
 
-* Configuration
+### Groups
+- belongs_to :user
+- has_many :comments
 
-* Database creation
+### Comments
+- belongs_to :prototype
+- belongs_to :user### Group
+|column|type|
+|:---:|:---:|
+|name|string|
+|user_id|integer|
 
-* Database initialization
+### Comment
+|column|type|
+|:---:|:---:|
+|user_id|integer|
+|group_id|integer|
+|text|text|
+|image|text|
 
-* How to run the test suite
+### Image
+|column|type|
+|:---:|:---:|
+|prototype_id|integer|
+|status|integer|
+|profile|string|
 
-* Services (job queues, cache servers, search engines, etc.)
+# Association
 
-* Deployment instructions
+### Users
+- has_many :groups
+- has_many :comments
 
-* ...
+### Groups
+- belongs_to :user
+- has_many :comments
+
+### Comments
+- belongs_to :prototype
+- belongs_to :user
